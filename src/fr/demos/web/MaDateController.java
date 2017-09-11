@@ -36,7 +36,7 @@ public class MaDateController extends HttpServlet {
 		// d représente le model
 		Date d = new Date();
 		
-		Climatisation clim1 = new Climatisation(24,1030,30,"R203");
+		Climatisation clim1 = new Climatisation(24,1010,30,"R203");
 		
 		// transfert du model
 		request.setAttribute("dateDuJour", d);

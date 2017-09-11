@@ -30,11 +30,11 @@ public class SQLClimatisationDAO implements ClimatisationDAO {
 		PreparedStatement psmt = cx.prepareStatement("insert into climatisation values (?,?,?,?,?)");
 		//Statement stmt = cx.createStatement()
 		//stmt.executeUpdate("insert into climatisation values ("+cl.getNomAppareil()+","+...
-		psmt.setString(1, cl.getNomAppareil());
+		psmt.setString(1, cl.getNom());
 		psmt.setDouble(2, cl.getTemperature());
 		psmt.setDouble(3, cl.getPression());
-		psmt.setInt(4, cl.getTauxHumidite());
-		psmt.setLong(5, cl.getDatation());
+		psmt.setInt(4, cl.getHumidite());
+		psmt.setLong(5, cl.getDateMesure());
 		psmt.executeUpdate();
 		// on rend la connexion au pool
 		cx.close();
